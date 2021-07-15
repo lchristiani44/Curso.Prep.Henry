@@ -38,7 +38,27 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
+  switch (color) {
+    case "blue":
+      return("This is blue");
+      break;
+    case "red":
+      return("This is red");
+      break;
+    case "green":
+      return("This is green");
+      break;
+    case "orange":
+      return("This is orange");
+      break;
+    default:
+      return("Color not found");
+  }
 }
+
+var color1 = "red";
+var color2 = "pink";
+colors(color1, color2);
 
 function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
@@ -110,8 +130,17 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  var i = 0;
+  do {
+    numero = numero + 5;
+    i++;
+  }
+  while(i < 8);
+  return numero;
 }
 
+var num = 15;
+doWhile(num);
 
 // No modificar nada debajo de esta línea
 // --------------------------------

@@ -1,22 +1,22 @@
 // En estas primeras 6 preguntas, reemplaza `null` por la respuesta
 
 // Crea una variable "string", puede contener lo que quieras:
-const nuevaString = null;
+const nuevaString = "Henry";
 
 // Crea una variable numérica, puede ser cualquier número:
-const nuevoNum = null;
+const nuevoNum = 44;
 
 // Crea una variable booleana:
-const nuevoBool = null;
+const nuevoBool = false;
 
 // Resuelve el siguiente problema matemático:
-const nuevaResta = 10 - null === 5;
+const nuevaResta = 10 - 5 === 5;
 
 // Resuelve el siguiente problema matemático:
-const nuevaMultiplicacion = 10 * null === 40 ;
+const nuevaMultiplicacion = 10 * 4 === 40 ;
 
 // Resuelve el siguiente problema matemático:
-const nuevoModulo = 21 % 5 === null;
+const nuevoModulo = 21 % 5 === 1;
 
 
 // En los próximos 22 problemas, deberás completar la función.
@@ -28,7 +28,10 @@ const nuevoModulo = 21 % 5 === null;
 function devolverString(str) {
   // "Return" la string provista: str
   // Tu código:
+  return str;
 }
+var name = "Lorenzo";
+devolverString(name);
 
 function suma(x, y) {
   // "x" e "y" son números
@@ -61,7 +64,16 @@ function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
+  if (str1.length === str2.length)
+  {
+    return true;
+  }
+  return false;
 }
+
+var a = "Carlos";
+var b = "Jose";
+tienenMismaLongitud(a, b);
 
 function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
@@ -180,9 +192,24 @@ function esVocal(letra){
   //Verificar si el usuario ingresó un string de más de un carácter y, en ese caso, informarle 
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   //Escribe tu código aquí
+  if (letra.length > 1)
+  {
+    return("Dato incorrecto");
+    return false;
+  }
+  if (letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u")
+  {
+    return("Es vocal");
+  }
+  else
+  {
+    return("Dato incorrecto");
+  }
 }
 
-
+var vocal = "e";
+var consonante = "f";
+esVocal(vocal, consonante);
 
 // No modificar nada debajo de esta línea
 // --------------------------------

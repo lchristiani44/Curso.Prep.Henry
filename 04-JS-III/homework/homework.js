@@ -47,15 +47,26 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+  var message = palabras.join(" ");
+  return message;
 }
 
+var palabras = ["welcome", "to", "Jurassic", "Park"];
+dePalabrasAFrase(palabras);
 
 function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+  for (let i = 0; i < array.length; i++) {
+    if (elemento === array[i]) {
+      return true;
+    }
+  }
+  return false;
 }
 
+arrayContiene([1, 3, 5, 7], 7);
 
 function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
