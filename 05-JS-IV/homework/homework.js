@@ -6,15 +6,33 @@ function crearGato(nombre, edad) {
   // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
   // Devuelve el objeto
   // Tu código:
+  const gato = {
+    nombre: nombre,
+    edad: edad,
+    meow: function () {
+      return("Meow!");
+    }
+  };
+  return gato;
 }
 
+crearGato("Khaleesi", 1)
 
 function agregarPropiedad(objeto, property) {
   // Agrega una propiedad al objeto (argumento "objeto") con el valor `null`
   // Devuelve el objeto
   // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
   // Tu código:
+  objeto[property] = null;
+  return objeto;
 }
+
+const nuevoObjeto = {
+  car: "Ford"
+};
+
+const new_property = "model";
+agregarPropiedad(nuevoObjeto, new_property);
 
 function invocarMetodo(objeto, metodo) {
   // "metodo" es una cadena que contiene el nombre de un método (funcion) en el objeto
@@ -35,7 +53,17 @@ function eliminarPropiedad(objeto, unaPropiedad) {
   // tip: tenes que usar bracket notation
   // Devuelve el objeto
   // Tu código:
+  objeto[unaPropiedad] = undefined;
+  return objeto;
 }
+
+new_object = {
+  lugar: "San Martin de los Andes",
+  actividad: "snowboard",
+  dias: 7
+};
+
+eliminarPropiedad(new_object, "actividad");
 
 function nuevoUsuario(nombre, email, password) {
   // Crea un nuevo objeto con las propiedades coincidiendo con los argumentos que se pasan a la función
@@ -94,7 +122,17 @@ function sumarLikesDeUsuario(usuario) {
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código:
+  var suma = 0;
+  for (let i = 0; i < usuario.posts.length; i++) {
+    suma = suma + usuario.posts[i].likes;
+  }
+  return suma;
 }
+
+const usuario = {
+  posts: [{likes: 14}, {likes: 6}]
+};
+sumarLikesDeUsuario(usuario);
 
 function agregarMetodoCalculoDescuento(producto) {
   // Agregar un método (función) al objeto "producto" llamado "calcularPrecioDescuento"
@@ -106,8 +144,19 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
-
+  producto.calcularPrecioDescuento = function() {
+    producto.calcularPrecioDescuento = producto.precio - producto.porcentajeDeDescuento * producto.precio;
+    return producto.calcularPrecioDescuento;
+  }
+  return producto;
 }
+
+const producto = {
+  precio: 150,
+  porcentajeDeDescuento: 0.15,
+};
+
+agregarMetodoCalculoDescuento(producto);
 
 // No modificar nada debajo de esta línea
 // --------------------------------
